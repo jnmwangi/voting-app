@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;800&family=Montserrat:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+
+:root{
+    --primary:#d1c4e9;
+    --secondary: #a094b7;
+    --light: #fff7ff;
+    --min-width: 800px;
+}
+
+body{
+    background-color: var(--light);
+    padding: 0px;
+    margin: 0px;
+    font-family: Montserrat;
+}
+
+h1, h2, h3, h4{
+    padding: 5px;
+    margin: 0;
+}
+
+header{
+    background-color: var(--primary);
+    justify-content: center;
+    display: flex;
+}
+
+header nav{
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    min-width: 80%;
+}
+
+header nav > *{
+    margin-right: 20px;
+    align-self: center;
+}
+
+header span{
+    font-size: large;
+    font-weight: bold;
+    align-self: center;
+}
+
+header img{
+    width: 32px;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+}
+
+header ul a{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    min-height: calc(100vh - 50px);
+    padding: 20px;
+}
+
+.container > *{
+    align-self: center;
+    padding: 10px 0;
+}
+
+.tab-group{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid var(--secondary);
+    min-width: var(--min-width);
+}
+
+.tab-group a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    
+}
+
+.tab-group a:hover{
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--secondary);
+}
+
+.tab-group a.active{
+    background-color: var(--secondary);
+    color: white;
+    border-bottom: 1px solid var(--secondary);
+}
+
+.card{
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(116, 116, 116);
+    padding: 10px;
+    min-width: 500px;
+    margin-bottom: 20px;
+}
+
+.card > *{
+    align-self: center;
+    margin-right: 20px;
+}
+
+.card img{
+    border-radius: 100%;
+    background-color: var(--secondary);
+    width: 128px;
+    height: 128px;
+    padding: 5px;
+}
+
+.card:hover{
+    background-color: var(--secondary);
+    color: white;
+}
+
+footer{
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between ;
+    padding: 50px;
+}
+
+footer > div:first-child{
+
+}
