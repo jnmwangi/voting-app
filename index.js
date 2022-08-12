@@ -42,16 +42,19 @@ for(let candidate of candidates){
 
 function card( candiate ){
 
+    //select the template that has the card elements
     const cardElement = document.getElementById('cardTemplate').content.cloneNode(true);
-    const paresentTab = document.getElementById('president');
+    //select the div that will contain the candidates
+    const presidentTab = document.getElementById('president');
 
+    //replace the name, partyname, votes and image with the candidate object attributes
     cardElement.querySelector('.name').innerHTML = candiate.name;
     cardElement.querySelector('.paryname').innerHTML = candiate.partyName;
     cardElement.querySelector('.votes').innerHTML = candiate.votes+' Votes';
     cardElement.querySelector('img').src = candiate.imageUrl;
 
-    paresentTab.appendChild(cardElement);
-
+    // append the candidate to the president div
+    presidentTab.appendChild(cardElement);
     
     /* let cardElement = document.createElement('div');
     cardElement.className = 'card';
