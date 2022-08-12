@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting App</title>
     <link rel="stylesheet" href="./style.css">
-
-    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -33,20 +31,11 @@
         </ul>
 
         <div id="president">
-            <div class="card">
-                <img src="./images/c1.png" alt="President One">
-                <div>
-                    <h2>Chris</h2>
-                    <h4>Party Name</h4>
-                    <h3>0 Votes</h3>
-                </div>
-                <div>
-                    <input type="radio" name="presidentVote">
-                </div>
-            </div>
 
             
-            <div class="card">
+
+            
+            <!-- <div class="card">
                 <img src="./images/c1.png" alt="President One">
                 <div>
                     <h2>Julius</h2>
@@ -69,7 +58,7 @@
                 <div>
                     <input type="radio" name="presidentVote">
                 </div>
-            </div>
+            </div> -->
 
             
         </div>
@@ -83,6 +72,23 @@
             <p>P.O. Box 12332-1231 Nairobi, Kenya</p>
        </div>
     </footer>
+
+
+    <template id="cardTemplate">
+        <div class="card">
+            <img src="./images/c1.png" alt="President One">
+            <div>
+                <h2 class="name">{{name}}</h2>
+                <h4 class="paryname">{{partyname}}</h4>
+                <h3 class="votes">{{votes}} Votes</h3>
+            </div>
+            <div>
+                <button class="voteBtn">Vote</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="./index.js"></script>
 
 </body>
 

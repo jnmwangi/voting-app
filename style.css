@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400;800&family=Montserrat:wght@300&family=Roboto+Condensed:wght@300&display=swap');
 
-:root{
-    --primary:#d1c4e9;
-    --secondary: #a094b7;
-    --light: #fff7ff;
-    --min-width: 800px;
+@media(min-width:720px){
+    :root{
+        --primary:#d1c4e9;
+        --secondary: #a094b7;
+        --light: #fff7ff;
+        --min-width: 800px;
+        --card-min-width: 500px;
+    }
+}
+
+@media(max-width:719px){
+    :root{
+        --primary:#d1c4e9;
+        --secondary: #a094b7;
+        --light: #fff7ff;
+        --min-width: 280px;
+        --card-min-width: 200px;
+    }
 }
 
 body{
@@ -79,9 +92,9 @@ header ul a{
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 10px;
     border-bottom: 1px solid var(--secondary);
-    min-width: var(--min-width);
+    /* min-width: var(--min-width); */
 }
 
 .tab-group a{
@@ -108,7 +121,7 @@ header ul a{
     border-radius: 5px;
     box-shadow: 0 0 2px rgb(116, 116, 116);
     padding: 10px;
-    min-width: 500px;
+    min-width: var(--card-min-width);
     margin-bottom: 20px;
 }
 
@@ -130,6 +143,15 @@ header ul a{
     color: white;
 }
 
+.card:hover .selected{
+    border-bottom: 7px solid var(--primary) !important;
+    border-right: 7px solid var(--primary) !important;
+}
+
+.card > div:last-child{
+    margin-left: auto;
+}
+
 footer{
     background-color: var(--secondary);
     display: flex;
@@ -139,4 +161,28 @@ footer{
 
 footer > div:first-child{
 
+}
+
+.voteBtn{
+    padding: 30px;
+    background: white;
+    border: 1px solid #919191;
+}
+
+.voteBtn:active{
+    background-color: red;
+}
+
+.voteBtn.selected{
+    content: '' !important;
+    padding: 0;
+    background: none;
+    border: none;
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 40px;
+    width: 20px;
+    margin-left: -50px; 
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
 }
